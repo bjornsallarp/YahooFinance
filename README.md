@@ -10,6 +10,7 @@ The YahooFinance framework is an iOS Objective-C framework for Yahoo Finance.
 
 ## Links
 
+- [YahooFinance framework blogpost with video demonstration](http://blog.sallarp.com/yahoo-finance-api-for-ios/)
 - [Yahoo! Finance](http://finance.yahoo.com)
 
 ## Dependency projects
