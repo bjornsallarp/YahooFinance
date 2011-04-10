@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F414981313521987008AD497 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981213521987008AD497 /* NSObject+JSON.m */; };
+		F414982813521AA4008AD497 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981D13521AA3008AD497 /* SBJsonStreamParser.m */; };
+		F414982913521AA4008AD497 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981F13521AA3008AD497 /* SBJsonStreamParserAdapter.m */; };
+		F414982A13521AA4008AD497 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = F414982113521AA3008AD497 /* SBJsonStreamParserState.m */; };
+		F414982B13521AA4008AD497 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F414982313521AA4008AD497 /* SBJsonStreamWriter.m */; };
+		F414982C13521AA4008AD497 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = F414982513521AA4008AD497 /* SBJsonStreamWriterState.m */; };
+		F414983013521C01008AD497 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = F414982F13521C01008AD497 /* SBJsonTokeniser.m */; };
+		F45C1E00133F4DB500B3D443 /* YFStockSymbolSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1DFF133F4DB500B3D443 /* YFStockSymbolSearch.m */; };
+		F45C1E05133F4E1200B3D443 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E04133F4E1200B3D443 /* Reachability.m */; };
+		F45C1E2A133F4E1B00B3D443 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E08133F4E1B00B3D443 /* ASIAuthenticationDialog.m */; };
+		F45C1E2B133F4E1B00B3D443 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E0B133F4E1B00B3D443 /* ASIDataCompressor.m */; };
+		F45C1E2C133F4E1B00B3D443 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E0D133F4E1B00B3D443 /* ASIDataDecompressor.m */; };
+		F45C1E2D133F4E1B00B3D443 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E0F133F4E1B00B3D443 /* ASIDownloadCache.m */; };
+		F45C1E2E133F4E1B00B3D443 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E11133F4E1B00B3D443 /* ASIFormDataRequest.m */; };
+		F45C1E2F133F4E1B00B3D443 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E13133F4E1B00B3D443 /* ASIHTTPRequest.m */; };
+		F45C1E30133F4E1B00B3D443 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E17133F4E1B00B3D443 /* ASIInputStream.m */; };
+		F45C1E31133F4E1B00B3D443 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E19133F4E1B00B3D443 /* ASINetworkQueue.m */; };
+		F45C1E36133F4E1B00B3D443 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E27133F4E1B00B3D443 /* SBJsonParser.m */; };
+		F45C1E37133F4E1B00B3D443 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E29133F4E1B00B3D443 /* SBJsonWriter.m */; };
+		F45C1E39133F4E3100B3D443 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E38133F4E3100B3D443 /* libz.1.2.3.dylib */; };
+		F45C1E41133F4E5500B3D443 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E40133F4E5500B3D443 /* CFNetwork.framework */; };
+		F45C1E43133F4E6000B3D443 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E42133F4E6000B3D443 /* SystemConfiguration.framework */; };
+		F45C1E45133F4E6D00B3D443 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E44133F4E6D00B3D443 /* MobileCoreServices.framework */; };
+		F45C1E49133F4F1900B3D443 /* YFStockSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E48133F4F1900B3D443 /* YFStockSymbol.m */; };
+		F45C1E4B133F502400B3D443 /* StockExchangeCurrency.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45C1E4A133F502400B3D443 /* StockExchangeCurrency.plist */; };
+		F4A35F0713508C7A003334AE /* YFCurrencyConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A35F0613508C7A003334AE /* YFCurrencyConversion.m */; };
+		F4A35F131351B2F5003334AE /* YFTwoValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A35F121351B2F5003334AE /* YFTwoValueObject.m */; };
+		F4A35F161351D15C003334AE /* BSYahooFinanceCurrencyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A35F151351D15C003334AE /* BSYahooFinanceCurrencyConverter.m */; };
+		F4A35F1A1351DBBD003334AE /* CurrencyConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A35F181351DBBD003334AE /* CurrencyConversionViewController.m */; };
+		F4A35F1B1351DBBD003334AE /* CurrencyConversionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A35F191351DBBD003334AE /* CurrencyConversionViewController.xib */; };
+		F4A766AB133F6C9A00BCC62B /* YFStockDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A766AA133F6C9A00BCC62B /* YFStockDetails.m */; };
+		F4A766AE133F6E3B00BCC62B /* YFStockDetailsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A766AD133F6E3B00BCC62B /* YFStockDetailsLoader.m */; };
+		F4A766B2133F794E00BCC62B /* BSYahooFinanceLoadDetailsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A766B0133F78FF00BCC62B /* BSYahooFinanceLoadDetailsTest.m */; };
+		F4A766B6133FA76000BCC62B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A766B4133FA75F00BCC62B /* DetailsViewController.m */; };
+		F4A766B7133FA76000BCC62B /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A766B5133FA75F00BCC62B /* DetailsViewController.xib */; };
+		F4EAE16E133F4CF700A543DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE16D133F4CF700A543DB /* UIKit.framework */; };
+		F4EAE170133F4CF700A543DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE16F133F4CF700A543DB /* Foundation.framework */; };
+		F4EAE172133F4CF700A543DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE171133F4CF700A543DB /* CoreGraphics.framework */; };
+		F4EAE178133F4CF700A543DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4EAE176133F4CF700A543DB /* InfoPlist.strings */; };
+		F4EAE17B133F4CF700A543DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE17A133F4CF700A543DB /* main.m */; };
+		F4EAE17E133F4CF700A543DB /* BSYahooFinanceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE17D133F4CF700A543DB /* BSYahooFinanceAppDelegate.m */; };
+		F4EAE181133F4CF700A543DB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EAE17F133F4CF700A543DB /* MainWindow.xib */; };
+		F4EAE184133F4CF700A543DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE183133F4CF700A543DB /* RootViewController.m */; };
+		F4EAE187133F4CF700A543DB /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EAE185133F4CF700A543DB /* RootViewController.xib */; };
+		F4EAE18E133F4CF800A543DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE16D133F4CF700A543DB /* UIKit.framework */; };
+		F4EAE18F133F4CF800A543DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE16F133F4CF700A543DB /* Foundation.framework */; };
+		F4EAE190133F4CF800A543DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAE171133F4CF700A543DB /* CoreGraphics.framework */; };
+		F4EAE198133F4CF800A543DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4EAE196133F4CF800A543DB /* InfoPlist.strings */; };
+		F4EAE19B133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F4EAE19A133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.h */; };
+		F4EAE19D133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EAE19C133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4EAE191133F4CF800A543DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4EAE160133F4CF700A543DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4EAE168133F4CF700A543DB;
+			remoteInfo = BSYahooFinance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F414981113521987008AD497 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		F414981213521987008AD497 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		F414981C13521AA3008AD497 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		F414981D13521AA3008AD497 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		F414981E13521AA3008AD497 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		F414981F13521AA3008AD497 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		F414982013521AA3008AD497 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		F414982113521AA3008AD497 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		F414982213521AA3008AD497 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		F414982313521AA4008AD497 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		F414982413521AA4008AD497 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		F414982513521AA4008AD497 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		F414982E13521C01008AD497 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		F414982F13521C01008AD497 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		F45C1DFE133F4DB500B3D443 /* YFStockSymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YFStockSymbolSearch.h; path = BSYahooFinance/YFStockSymbolSearch.h; sourceTree = "<group>"; };
+		F45C1DFF133F4DB500B3D443 /* YFStockSymbolSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFStockSymbolSearch.m; path = BSYahooFinance/YFStockSymbolSearch.m; sourceTree = "<group>"; };
+		F45C1E03133F4E1200B3D443 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F45C1E04133F4E1200B3D443 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F45C1E07133F4E1B00B3D443 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		F45C1E08133F4E1B00B3D443 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		F45C1E09133F4E1B00B3D443 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		F45C1E0A133F4E1B00B3D443 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		F45C1E0B133F4E1B00B3D443 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		F45C1E0C133F4E1B00B3D443 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		F45C1E0D133F4E1B00B3D443 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		F45C1E0E133F4E1B00B3D443 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		F45C1E0F133F4E1B00B3D443 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		F45C1E10133F4E1B00B3D443 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		F45C1E11133F4E1B00B3D443 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		F45C1E12133F4E1B00B3D443 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		F45C1E13133F4E1B00B3D443 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		F45C1E14133F4E1B00B3D443 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		F45C1E15133F4E1B00B3D443 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		F45C1E16133F4E1B00B3D443 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		F45C1E17133F4E1B00B3D443 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		F45C1E18133F4E1B00B3D443 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		F45C1E19133F4E1B00B3D443 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		F45C1E1A133F4E1B00B3D443 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		F45C1E1F133F4E1B00B3D443 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F45C1E26133F4E1B00B3D443 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F45C1E27133F4E1B00B3D443 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		F45C1E28133F4E1B00B3D443 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F45C1E29133F4E1B00B3D443 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		F45C1E38133F4E3100B3D443 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		F45C1E40133F4E5500B3D443 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F45C1E42133F4E6000B3D443 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F45C1E44133F4E6D00B3D443 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F45C1E47133F4F1900B3D443 /* YFStockSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFStockSymbol.h; sourceTree = "<group>"; };
+		F45C1E48133F4F1900B3D443 /* YFStockSymbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFStockSymbol.m; sourceTree = "<group>"; };
+		F45C1E4A133F502400B3D443 /* StockExchangeCurrency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StockExchangeCurrency.plist; path = BSYahooFinance/StockExchangeCurrency.plist; sourceTree = "<group>"; };
+		F4A35F0513508C7A003334AE /* YFCurrencyConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YFCurrencyConversion.h; path = BSYahooFinance/YFCurrencyConversion.h; sourceTree = "<group>"; };
+		F4A35F0613508C7A003334AE /* YFCurrencyConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFCurrencyConversion.m; path = BSYahooFinance/YFCurrencyConversion.m; sourceTree = "<group>"; };
+		F4A35F111351B2F5003334AE /* YFTwoValueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTwoValueObject.h; sourceTree = "<group>"; };
+		F4A35F121351B2F5003334AE /* YFTwoValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTwoValueObject.m; sourceTree = "<group>"; };
+		F4A35F141351D15C003334AE /* BSYahooFinanceCurrencyConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSYahooFinanceCurrencyConverter.h; sourceTree = "<group>"; };
+		F4A35F151351D15C003334AE /* BSYahooFinanceCurrencyConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSYahooFinanceCurrencyConverter.m; sourceTree = "<group>"; };
+		F4A35F171351DBBD003334AE /* CurrencyConversionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConversionViewController.h; sourceTree = "<group>"; };
+		F4A35F181351DBBD003334AE /* CurrencyConversionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyConversionViewController.m; sourceTree = "<group>"; };
+		F4A35F191351DBBD003334AE /* CurrencyConversionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyConversionViewController.xib; sourceTree = "<group>"; };
+		F4A766A6133F5FC000BCC62B /* BSYahooFinance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSYahooFinance.h; path = BSYahooFinance/BSYahooFinance.h; sourceTree = "<group>"; };
+		F4A766A9133F6C9A00BCC62B /* YFStockDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFStockDetails.h; sourceTree = "<group>"; };
+		F4A766AA133F6C9A00BCC62B /* YFStockDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFStockDetails.m; sourceTree = "<group>"; };
+		F4A766AC133F6E3B00BCC62B /* YFStockDetailsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YFStockDetailsLoader.h; path = BSYahooFinance/YFStockDetailsLoader.h; sourceTree = "<group>"; };
+		F4A766AD133F6E3B00BCC62B /* YFStockDetailsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFStockDetailsLoader.m; path = BSYahooFinance/YFStockDetailsLoader.m; sourceTree = "<group>"; };
+		F4A766AF133F78FF00BCC62B /* BSYahooFinanceLoadDetailsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSYahooFinanceLoadDetailsTest.h; sourceTree = "<group>"; };
+		F4A766B0133F78FF00BCC62B /* BSYahooFinanceLoadDetailsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSYahooFinanceLoadDetailsTest.m; sourceTree = "<group>"; };
+		F4A766B3133FA75F00BCC62B /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F4A766B4133FA75F00BCC62B /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		F4A766B5133FA75F00BCC62B /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		F4EAE169133F4CF700A543DB /* BSYahooFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSYahooFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EAE16D133F4CF700A543DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4EAE16F133F4CF700A543DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4EAE171133F4CF700A543DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F4EAE175133F4CF700A543DB /* BSYahooFinance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSYahooFinance-Info.plist"; sourceTree = "<group>"; };
+		F4EAE177133F4CF700A543DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4EAE179133F4CF700A543DB /* BSYahooFinance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BSYahooFinance-Prefix.pch"; sourceTree = "<group>"; };
+		F4EAE17A133F4CF700A543DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4EAE17C133F4CF700A543DB /* BSYahooFinanceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYahooFinanceAppDelegate.h; sourceTree = "<group>"; };
+		F4EAE17D133F4CF700A543DB /* BSYahooFinanceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSYahooFinanceAppDelegate.m; sourceTree = "<group>"; };
+		F4EAE180133F4CF700A543DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F4EAE182133F4CF700A543DB /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F4EAE183133F4CF700A543DB /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F4EAE186133F4CF700A543DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		F4EAE18D133F4CF800A543DB /* BSYahooFinanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSYahooFinanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EAE195133F4CF800A543DB /* BSYahooFinanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSYahooFinanceTests-Info.plist"; sourceTree = "<group>"; };
+		F4EAE197133F4CF800A543DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4EAE199133F4CF800A543DB /* BSYahooFinanceTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BSYahooFinanceTests-Prefix.pch"; sourceTree = "<group>"; };
+		F4EAE19A133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYahooFinanceSymbolSearchTests.h; sourceTree = "<group>"; };
+		F4EAE19C133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSYahooFinanceSymbolSearchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4EAE166133F4CF700A543DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45C1E45133F4E6D00B3D443 /* MobileCoreServices.framework in Frameworks */,
+				F45C1E43133F4E6000B3D443 /* SystemConfiguration.framework in Frameworks */,
+				F45C1E41133F4E5500B3D443 /* CFNetwork.framework in Frameworks */,
+				F45C1E39133F4E3100B3D443 /* libz.1.2.3.dylib in Frameworks */,
+				F4EAE16E133F4CF700A543DB /* UIKit.framework in Frameworks */,
+				F4EAE170133F4CF700A543DB /* Foundation.framework in Frameworks */,
+				F4EAE172133F4CF700A543DB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4EAE189133F4CF800A543DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EAE18E133F4CF800A543DB /* UIKit.framework in Frameworks */,
+				F4EAE18F133F4CF800A543DB /* Foundation.framework in Frameworks */,
+				F4EAE190133F4CF800A543DB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F45C1DFD133F4D9000B3D443 /* BSYahooFinance */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E46133F4EF400B3D443 /* Entities */,
+				F4A35F0513508C7A003334AE /* YFCurrencyConversion.h */,
+				F4A35F0613508C7A003334AE /* YFCurrencyConversion.m */,
+				F4A766AC133F6E3B00BCC62B /* YFStockDetailsLoader.h */,
+				F4A766AD133F6E3B00BCC62B /* YFStockDetailsLoader.m */,
+				F45C1DFE133F4DB500B3D443 /* YFStockSymbolSearch.h */,
+				F45C1DFF133F4DB500B3D443 /* YFStockSymbolSearch.m */,
+				F45C1E4A133F502400B3D443 /* StockExchangeCurrency.plist */,
+				F4A766A6133F5FC000BCC62B /* BSYahooFinance.h */,
+			);
+			name = BSYahooFinance;
+			sourceTree = "<group>";
+		};
+		F45C1E01133F4DBC00B3D443 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E06133F4E1B00B3D443 /* ASI */,
+				F45C1E1E133F4E1B00B3D443 /* JSON */,
+				F45C1E02133F4E1200B3D443 /* Apple */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		F45C1E02133F4E1200B3D443 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E03133F4E1200B3D443 /* Reachability.h */,
+				F45C1E04133F4E1200B3D443 /* Reachability.m */,
+			);
+			name = Apple;
+			path = ASI/External/Reachability;
+			sourceTree = "<group>";
+		};
+		F45C1E06133F4E1B00B3D443 /* ASI */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E07133F4E1B00B3D443 /* ASIAuthenticationDialog.h */,
+				F45C1E08133F4E1B00B3D443 /* ASIAuthenticationDialog.m */,
+				F45C1E09133F4E1B00B3D443 /* ASICacheDelegate.h */,
+				F45C1E0A133F4E1B00B3D443 /* ASIDataCompressor.h */,
+				F45C1E0B133F4E1B00B3D443 /* ASIDataCompressor.m */,
+				F45C1E0C133F4E1B00B3D443 /* ASIDataDecompressor.h */,
+				F45C1E0D133F4E1B00B3D443 /* ASIDataDecompressor.m */,
+				F45C1E0E133F4E1B00B3D443 /* ASIDownloadCache.h */,
+				F45C1E0F133F4E1B00B3D443 /* ASIDownloadCache.m */,
+				F45C1E10133F4E1B00B3D443 /* ASIFormDataRequest.h */,
+				F45C1E11133F4E1B00B3D443 /* ASIFormDataRequest.m */,
+				F45C1E12133F4E1B00B3D443 /* ASIHTTPRequest.h */,
+				F45C1E13133F4E1B00B3D443 /* ASIHTTPRequest.m */,
+				F45C1E14133F4E1B00B3D443 /* ASIHTTPRequestConfig.h */,
+				F45C1E15133F4E1B00B3D443 /* ASIHTTPRequestDelegate.h */,
+				F45C1E16133F4E1B00B3D443 /* ASIInputStream.h */,
+				F45C1E17133F4E1B00B3D443 /* ASIInputStream.m */,
+				F45C1E18133F4E1B00B3D443 /* ASINetworkQueue.h */,
+				F45C1E19133F4E1B00B3D443 /* ASINetworkQueue.m */,
+				F45C1E1A133F4E1B00B3D443 /* ASIProgressDelegate.h */,
+			);
+			name = ASI;
+			path = ASI/Classes;
+			sourceTree = "<group>";
+		};
+		F45C1E1E133F4E1B00B3D443 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E1F133F4E1B00B3D443 /* JSON.h */,
+				F414981C13521AA3008AD497 /* SBJsonStreamParser.h */,
+				F414981D13521AA3008AD497 /* SBJsonStreamParser.m */,
+				F414981E13521AA3008AD497 /* SBJsonStreamParserAdapter.h */,
+				F414981F13521AA3008AD497 /* SBJsonStreamParserAdapter.m */,
+				F414982013521AA3008AD497 /* SBJsonStreamParserState.h */,
+				F414982113521AA3008AD497 /* SBJsonStreamParserState.m */,
+				F414982213521AA3008AD497 /* SBJsonStreamWriter.h */,
+				F414982313521AA4008AD497 /* SBJsonStreamWriter.m */,
+				F414982413521AA4008AD497 /* SBJsonStreamWriterState.h */,
+				F414982513521AA4008AD497 /* SBJsonStreamWriterState.m */,
+				F414982E13521C01008AD497 /* SBJsonTokeniser.h */,
+				F414982F13521C01008AD497 /* SBJsonTokeniser.m */,
+				F414981113521987008AD497 /* NSObject+JSON.h */,
+				F414981213521987008AD497 /* NSObject+JSON.m */,
+				F45C1E26133F4E1B00B3D443 /* SBJsonParser.h */,
+				F45C1E27133F4E1B00B3D443 /* SBJsonParser.m */,
+				F45C1E28133F4E1B00B3D443 /* SBJsonWriter.h */,
+				F45C1E29133F4E1B00B3D443 /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			path = JSON/Classes;
+			sourceTree = "<group>";
+		};
+		F45C1E46133F4EF400B3D443 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E47133F4F1900B3D443 /* YFStockSymbol.h */,
+				F45C1E48133F4F1900B3D443 /* YFStockSymbol.m */,
+				F4A766A9133F6C9A00BCC62B /* YFStockDetails.h */,
+				F4A766AA133F6C9A00BCC62B /* YFStockDetails.m */,
+				F4A35F111351B2F5003334AE /* YFTwoValueObject.h */,
+				F4A35F121351B2F5003334AE /* YFTwoValueObject.m */,
+			);
+			name = Entities;
+			path = BSYahooFinance/Entities;
+			sourceTree = "<group>";
+		};
+		F4A766B8133FB14700BCC62B /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				F4A35F191351DBBD003334AE /* CurrencyConversionViewController.xib */,
+				F4EAE185133F4CF700A543DB /* RootViewController.xib */,
+				F4A766B5133FA75F00BCC62B /* DetailsViewController.xib */,
+			);
+			name = XIB;
+			sourceTree = "<group>";
+		};
+		F4EAE15E133F4CF700A543DB = {
+			isa = PBXGroup;
+			children = (
+				F45C1DFD133F4D9000B3D443 /* BSYahooFinance */,
+				F4EAE173133F4CF700A543DB /* BSYahooFinanceDemo */,
+				F4EAE193133F4CF800A543DB /* BSYahooFinanceTests */,
+				F45C1E01133F4DBC00B3D443 /* External */,
+				F4EAE16C133F4CF700A543DB /* Frameworks */,
+				F4EAE16A133F4CF700A543DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4EAE16A133F4CF700A543DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAE169133F4CF700A543DB /* BSYahooFinance.app */,
+				F4EAE18D133F4CF800A543DB /* BSYahooFinanceTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4EAE16C133F4CF700A543DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45C1E44133F4E6D00B3D443 /* MobileCoreServices.framework */,
+				F45C1E42133F4E6000B3D443 /* SystemConfiguration.framework */,
+				F45C1E40133F4E5500B3D443 /* CFNetwork.framework */,
+				F45C1E38133F4E3100B3D443 /* libz.1.2.3.dylib */,
+				F4EAE16D133F4CF700A543DB /* UIKit.framework */,
+				F4EAE16F133F4CF700A543DB /* Foundation.framework */,
+				F4EAE171133F4CF700A543DB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4EAE173133F4CF700A543DB /* BSYahooFinanceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAE1A6133F4D0300A543DB /* ViewControllers */,
+				F4EAE17C133F4CF700A543DB /* BSYahooFinanceAppDelegate.h */,
+				F4EAE17D133F4CF700A543DB /* BSYahooFinanceAppDelegate.m */,
+				F4EAE17F133F4CF700A543DB /* MainWindow.xib */,
+				F4EAE174133F4CF700A543DB /* Supporting Files */,
+			);
+			path = BSYahooFinanceDemo;
+			sourceTree = "<group>";
+		};
+		F4EAE174133F4CF700A543DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAE175133F4CF700A543DB /* BSYahooFinance-Info.plist */,
+				F4EAE176133F4CF700A543DB /* InfoPlist.strings */,
+				F4EAE179133F4CF700A543DB /* BSYahooFinance-Prefix.pch */,
+				F4EAE17A133F4CF700A543DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4EAE193133F4CF800A543DB /* BSYahooFinanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4A35F141351D15C003334AE /* BSYahooFinanceCurrencyConverter.h */,
+				F4A35F151351D15C003334AE /* BSYahooFinanceCurrencyConverter.m */,
+				F4EAE19A133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.h */,
+				F4EAE19C133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.m */,
+				F4A766AF133F78FF00BCC62B /* BSYahooFinanceLoadDetailsTest.h */,
+				F4A766B0133F78FF00BCC62B /* BSYahooFinanceLoadDetailsTest.m */,
+				F4EAE194133F4CF800A543DB /* Supporting Files */,
+			);
+			path = BSYahooFinanceTests;
+			sourceTree = "<group>";
+		};
+		F4EAE194133F4CF800A543DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAE195133F4CF800A543DB /* BSYahooFinanceTests-Info.plist */,
+				F4EAE196133F4CF800A543DB /* InfoPlist.strings */,
+				F4EAE199133F4CF800A543DB /* BSYahooFinanceTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4EAE1A6133F4D0300A543DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4A766B8133FB14700BCC62B /* XIB */,
+				F4EAE182133F4CF700A543DB /* RootViewController.h */,
+				F4EAE183133F4CF700A543DB /* RootViewController.m */,
+				F4A766B3133FA75F00BCC62B /* DetailsViewController.h */,
+				F4A766B4133FA75F00BCC62B /* DetailsViewController.m */,
+				F4A35F171351DBBD003334AE /* CurrencyConversionViewController.h */,
+				F4A35F181351DBBD003334AE /* CurrencyConversionViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4EAE168133F4CF700A543DB /* BSYahooFinance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4EAE1A0133F4CF800A543DB /* Build configuration list for PBXNativeTarget "BSYahooFinance" */;
+			buildPhases = (
+				F4EAE165133F4CF700A543DB /* Sources */,
+				F4EAE166133F4CF700A543DB /* Frameworks */,
+				F4EAE167133F4CF700A543DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSYahooFinance;
+			productName = BSYahooFinance;
+			productReference = F4EAE169133F4CF700A543DB /* BSYahooFinance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4EAE18C133F4CF800A543DB /* BSYahooFinanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4EAE1A3133F4CF800A543DB /* Build configuration list for PBXNativeTarget "BSYahooFinanceTests" */;
+			buildPhases = (
+				F4EAE188133F4CF800A543DB /* Sources */,
+				F4EAE189133F4CF800A543DB /* Frameworks */,
+				F4EAE18A133F4CF800A543DB /* Resources */,
+				F4EAE18B133F4CF800A543DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4EAE192133F4CF800A543DB /* PBXTargetDependency */,
+			);
+			name = BSYahooFinanceTests;
+			productName = BSYahooFinanceTests;
+			productReference = F4EAE18D133F4CF800A543DB /* BSYahooFinanceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4EAE160133F4CF700A543DB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F4EAE163133F4CF700A543DB /* Build configuration list for PBXProject "BSYahooFinance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F4EAE15E133F4CF700A543DB;
+			productRefGroup = F4EAE16A133F4CF700A543DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4EAE168133F4CF700A543DB /* BSYahooFinance */,
+				F4EAE18C133F4CF800A543DB /* BSYahooFinanceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4EAE167133F4CF700A543DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EAE178133F4CF700A543DB /* InfoPlist.strings in Resources */,
+				F4EAE181133F4CF700A543DB /* MainWindow.xib in Resources */,
+				F4EAE187133F4CF700A543DB /* RootViewController.xib in Resources */,
+				F45C1E4B133F502400B3D443 /* StockExchangeCurrency.plist in Resources */,
+				F4A766B7133FA76000BCC62B /* DetailsViewController.xib in Resources */,
+				F4A35F1B1351DBBD003334AE /* CurrencyConversionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4EAE18A133F4CF800A543DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EAE198133F4CF800A543DB /* InfoPlist.strings in Resources */,
+				F4EAE19B133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4EAE18B133F4CF800A543DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4EAE165133F4CF700A543DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EAE17B133F4CF700A543DB /* main.m in Sources */,
+				F4EAE17E133F4CF700A543DB /* BSYahooFinanceAppDelegate.m in Sources */,
+				F4EAE184133F4CF700A543DB /* RootViewController.m in Sources */,
+				F45C1E00133F4DB500B3D443 /* YFStockSymbolSearch.m in Sources */,
+				F45C1E05133F4E1200B3D443 /* Reachability.m in Sources */,
+				F45C1E2A133F4E1B00B3D443 /* ASIAuthenticationDialog.m in Sources */,
+				F45C1E2B133F4E1B00B3D443 /* ASIDataCompressor.m in Sources */,
+				F45C1E2C133F4E1B00B3D443 /* ASIDataDecompressor.m in Sources */,
+				F45C1E2D133F4E1B00B3D443 /* ASIDownloadCache.m in Sources */,
+				F45C1E2E133F4E1B00B3D443 /* ASIFormDataRequest.m in Sources */,
+				F45C1E2F133F4E1B00B3D443 /* ASIHTTPRequest.m in Sources */,
+				F45C1E30133F4E1B00B3D443 /* ASIInputStream.m in Sources */,
+				F45C1E31133F4E1B00B3D443 /* ASINetworkQueue.m in Sources */,
+				F45C1E36133F4E1B00B3D443 /* SBJsonParser.m in Sources */,
+				F45C1E37133F4E1B00B3D443 /* SBJsonWriter.m in Sources */,
+				F45C1E49133F4F1900B3D443 /* YFStockSymbol.m in Sources */,
+				F4A766AB133F6C9A00BCC62B /* YFStockDetails.m in Sources */,
+				F4A766AE133F6E3B00BCC62B /* YFStockDetailsLoader.m in Sources */,
+				F4A766B6133FA76000BCC62B /* DetailsViewController.m in Sources */,
+				F4A35F0713508C7A003334AE /* YFCurrencyConversion.m in Sources */,
+				F4A35F131351B2F5003334AE /* YFTwoValueObject.m in Sources */,
+				F4A35F1A1351DBBD003334AE /* CurrencyConversionViewController.m in Sources */,
+				F414981313521987008AD497 /* NSObject+JSON.m in Sources */,
+				F414982813521AA4008AD497 /* SBJsonStreamParser.m in Sources */,
+				F414982913521AA4008AD497 /* SBJsonStreamParserAdapter.m in Sources */,
+				F414982A13521AA4008AD497 /* SBJsonStreamParserState.m in Sources */,
+				F414982B13521AA4008AD497 /* SBJsonStreamWriter.m in Sources */,
+				F414982C13521AA4008AD497 /* SBJsonStreamWriterState.m in Sources */,
+				F414983013521C01008AD497 /* SBJsonTokeniser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4EAE188133F4CF800A543DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EAE19D133F4CF800A543DB /* BSYahooFinanceSymbolSearchTests.m in Sources */,
+				F4A766B2133F794E00BCC62B /* BSYahooFinanceLoadDetailsTest.m in Sources */,
+				F4A35F161351D15C003334AE /* BSYahooFinanceCurrencyConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4EAE192133F4CF800A543DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4EAE168133F4CF700A543DB /* BSYahooFinance */;
+			targetProxy = F4EAE191133F4CF800A543DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4EAE176133F4CF700A543DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EAE177133F4CF700A543DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F4EAE17F133F4CF700A543DB /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EAE180133F4CF700A543DB /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F4EAE185133F4CF700A543DB /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EAE186133F4CF700A543DB /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		F4EAE196133F4CF800A543DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EAE197133F4CF800A543DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4EAE19E133F4CF800A543DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4EAE19F133F4CF800A543DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F4EAE1A1133F4CF800A543DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSYahooFinanceDemo/BSYahooFinance-Prefix.pch";
+				INFOPLIST_FILE = "BSYahooFinanceDemo/BSYahooFinance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F4EAE1A2133F4CF800A543DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSYahooFinanceDemo/BSYahooFinance-Prefix.pch";
+				INFOPLIST_FILE = "BSYahooFinanceDemo/BSYahooFinance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F4EAE1A4133F4CF800A543DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSYahooFinance.app/BSYahooFinance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSYahooFinanceTests/BSYahooFinanceTests-Prefix.pch";
+				INFOPLIST_FILE = "BSYahooFinanceTests/BSYahooFinanceTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F4EAE1A5133F4CF800A543DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSYahooFinance.app/BSYahooFinance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSYahooFinanceTests/BSYahooFinanceTests-Prefix.pch";
+				INFOPLIST_FILE = "BSYahooFinanceTests/BSYahooFinanceTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4EAE163133F4CF700A543DB /* Build configuration list for PBXProject "BSYahooFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4EAE19E133F4CF800A543DB /* Debug */,
+				F4EAE19F133F4CF800A543DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4EAE1A0133F4CF800A543DB /* Build configuration list for PBXNativeTarget "BSYahooFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4EAE1A1133F4CF800A543DB /* Debug */,
+				F4EAE1A2133F4CF800A543DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4EAE1A3133F4CF800A543DB /* Build configuration list for PBXNativeTarget "BSYahooFinanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4EAE1A4133F4CF800A543DB /* Debug */,
+				F4EAE1A5133F4CF800A543DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4EAE160133F4CF700A543DB /* Project object */;
+}
