@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70B94721589B3D6003CC371 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C70B94711589B3D6003CC371 /* libz.1.2.5.dylib */; };
 		F414981313521987008AD497 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981213521987008AD497 /* NSObject+JSON.m */; };
 		F414982813521AA4008AD497 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981D13521AA3008AD497 /* SBJsonStreamParser.m */; };
 		F414982913521AA4008AD497 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F414981F13521AA3008AD497 /* SBJsonStreamParserAdapter.m */; };
@@ -26,7 +27,6 @@
 		F45C1E31133F4E1B00B3D443 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E19133F4E1B00B3D443 /* ASINetworkQueue.m */; };
 		F45C1E36133F4E1B00B3D443 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E27133F4E1B00B3D443 /* SBJsonParser.m */; };
 		F45C1E37133F4E1B00B3D443 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C1E29133F4E1B00B3D443 /* SBJsonWriter.m */; };
-		F45C1E39133F4E3100B3D443 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E38133F4E3100B3D443 /* libz.1.2.3.dylib */; };
 		F45C1E41133F4E5500B3D443 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E40133F4E5500B3D443 /* CFNetwork.framework */; };
 		F45C1E43133F4E6000B3D443 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E42133F4E6000B3D443 /* SystemConfiguration.framework */; };
 		F45C1E45133F4E6D00B3D443 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C1E44133F4E6D00B3D443 /* MobileCoreServices.framework */; };
@@ -70,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C70B94711589B3D6003CC371 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		F414981113521987008AD497 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		F414981213521987008AD497 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		F414981C13521AA3008AD497 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
@@ -166,10 +167,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70B94721589B3D6003CC371 /* libz.1.2.5.dylib in Frameworks */,
 				F45C1E45133F4E6D00B3D443 /* MobileCoreServices.framework in Frameworks */,
 				F45C1E43133F4E6000B3D443 /* SystemConfiguration.framework in Frameworks */,
 				F45C1E41133F4E5500B3D443 /* CFNetwork.framework in Frameworks */,
-				F45C1E39133F4E3100B3D443 /* libz.1.2.3.dylib in Frameworks */,
 				F4EAE16E133F4CF700A543DB /* UIKit.framework in Frameworks */,
 				F4EAE170133F4CF700A543DB /* Foundation.framework in Frameworks */,
 				F4EAE172133F4CF700A543DB /* CoreGraphics.framework in Frameworks */,
@@ -307,6 +308,7 @@
 		F4EAE15E133F4CF700A543DB = {
 			isa = PBXGroup;
 			children = (
+				C70B94711589B3D6003CC371 /* libz.1.2.5.dylib */,
 				F45C1DFD133F4D9000B3D443 /* BSYahooFinance */,
 				F4EAE173133F4CF700A543DB /* BSYahooFinanceDemo */,
 				F4EAE193133F4CF800A543DB /* BSYahooFinanceTests */,

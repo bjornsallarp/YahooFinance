@@ -23,19 +23,19 @@
     id<YFStockDetailsLoaderDelegate> delegate;
     ASIHTTPRequest *internalStockRequest;
     NSError *internalError;
-    YFStockDetails *internalStockDetails;
-    NSString *internalSymbolToLoad;
+    NSMutableArray *internalStockDetails;
+    NSArray *internalSymbolsToLoad;
     BOOL synchronousLoad;
 }
 
 @property (nonatomic, assign) id<YFStockDetailsLoaderDelegate> delegate;
 @property (nonatomic, readonly) NSError *error;
-@property (nonatomic, readonly) YFStockDetails *stockDetails;
+@property (nonatomic, readonly) NSArray *stockDetails;
 @property (nonatomic, assign) BOOL synchronousLoad;
 
 + (YFStockDetailsLoader *)loaderWithDelegate:(id<YFStockDetailsLoaderDelegate>)delegate;
 - (id)initWithDelegate:(id<YFStockDetailsLoaderDelegate>)delegate;
-- (void)loadDetails:(NSString *)stockSymbol;
+- (void)loadDetails:(NSArray *)stockSymbols;
 - (void)cancel;
 
 @end
