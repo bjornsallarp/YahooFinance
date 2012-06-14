@@ -16,8 +16,8 @@
 @interface YFStockDetailsLoader()
 @property (nonatomic, retain) ASIHTTPRequest *internalStockRequest;
 @property (nonatomic, retain) NSError *internalError;
-@property (nonatomic, retain) YFStockDetails *internalStockDetails;
-@property (nonatomic, retain) NSString *internalSymbolToLoad;
+@property (nonatomic, retain) NSMutableArray *internalStockDetails;
+@property (nonatomic, retain) NSArray *internalSymbolsToLoad;
 @end
 
 @implementation YFStockDetailsLoader
@@ -26,11 +26,11 @@
 @synthesize internalStockRequest;
 @synthesize internalError;
 @synthesize internalStockDetails;
-@synthesize internalSymbolToLoad;
+@synthesize internalSymbolsToLoad;
 @dynamic error;
 @dynamic stockDetails;
 
-static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v1/public/yql?q=select%%20*%%20from%%20yahoo.finance.quotes%%20where%%20symbol%%20%%3D%%20%%22%@%%22&format=json&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=cbfunc";
+static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v1/public/yql?q=select%%20*%%20from%%20yahoo.finance.quotes%%20where%%20symbol%%20in%%20(%@)&format=json&env=store%%3A%%2F%%2Fdatatables.org%%2Falltableswithkeys&callback=cbfunc";
 
 
 #pragma mark - Initializers
@@ -51,12 +51,18 @@ static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v
 
 #pragma mark - Implementation
 
-- (void)loadDetails:(NSString *)stockSymbol
+- (void)loadDetails:(NSArray *)stockSymbols
 {
     [self cancel];
-    self.internalSymbolToLoad = stockSymbol;
+    self.internalSymbolsToLoad = stockSymbols;
     
-    NSURL *requestUrl = [NSURL URLWithString:[NSString stringWithFormat:yahooLoadStockDetailsURLString, [stockSymbol stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+    NSMutableArray *symbolParams = [NSMutableArray arrayWithCapacity:[stockSymbols count]];
+    for (NSString *stockSymbol in stockSymbols) {
+        [symbolParams addObject:[NSString stringWithFormat:@"'%@'", [stockSymbol stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:yahooLoadStockDetailsURLString, [symbolParams componentsJoinedByString:@","]];
+    NSURL *requestUrl = [NSURL URLWithString:urlString];
     
     self.internalStockRequest = [ASIHTTPRequest requestWithURL:requestUrl];
     [self.internalStockRequest setCachePolicy:ASIDoNotReadFromCacheCachePolicy];
@@ -79,7 +85,7 @@ static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v
         self.internalStockRequest = nil;
     }
     
-    self.internalSymbolToLoad = nil;
+    self.internalSymbolsToLoad = nil;
     self.internalStockDetails = nil;
     self.internalError = nil;
 }
@@ -101,12 +107,19 @@ static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v
 	else {
         int resultCount = [[[parsedDictionary objectForKey:@"query"] objectForKey:@"count"] intValue];
 
-        if (resultCount == 1) {
-            NSDictionary *stockInfo = [[[parsedDictionary objectForKey:@"query"] objectForKey:@"results"] objectForKey:@"quote"];
-            if(stockInfo != nil) {
-                self.internalStockDetails = [YFStockDetails stockDetailsWithDetails:stockInfo];
+        if (resultCount >0) {
+            id quotes = [[[parsedDictionary objectForKey:@"query"] objectForKey:@"results"] objectForKey:@"quote"];
+            
+            if ([quotes isKindOfClass:[NSDictionary class]]) {
+                self.internalStockDetails = [NSMutableArray arrayWithObject:[YFStockDetails stockDetailsWithDetails:quotes]];
+            } else if ([quotes isKindOfClass:[NSArray class]]) {
+                self.internalStockDetails = [NSMutableArray arrayWithCapacity:[quotes count]];
+                for (NSDictionary *quote in quotes) {
+                    [self.internalStockDetails addObject:[YFStockDetails stockDetailsWithDetails:quote]];
+                }
             }
         }
+            
 
         if (self.internalStockDetails == nil) {
             self.internalError = [NSError errorWithDomain:@"YFStockDetailsLoader" code:0 userInfo:
@@ -137,8 +150,7 @@ static NSString *yahooLoadStockDetailsURLString = @"http://query.yahooapis.com/v
     return self.internalError;
 }
 
-- (YFStockDetails *)stockDetails
-{
+- (NSArray *)stockDetails {
     return self.internalStockDetails;
 }
 

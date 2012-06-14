@@ -33,14 +33,16 @@
 {
     self.title = self.stockSymbol.name;
     self.detailsLoader = [YFStockDetailsLoader loaderWithDelegate:self];
-    [self.detailsLoader loadDetails:self.stockSymbol.symbol];
+    [self.detailsLoader loadDetails:[NSArray arrayWithObject:self.stockSymbol.symbol]];
 }
 
 #pragma mark - YFStockDetailsLoader delegate methods
 
 - (void)stockDetailsDidLoad:(YFStockDetailsLoader *)aDetailsLoader
 {    
-    self.detailKeys = [aDetailsLoader.stockDetails.detailsDictionary allKeys];
+    NSArray *details = aDetailsLoader.stockDetails;
+    YFStockDetails *stockDetails = [details objectAtIndex:0];
+    self.detailKeys = [stockDetails.detailsDictionary allKeys];
     [self.stockDetails reloadData];
 }
 
@@ -90,7 +92,9 @@
     }
     else if ([self.detailKeys count] > 0) {
         cell.textLabel.textColor = [UIColor blackColor];
-        NSString *str = [self.detailsLoader.stockDetails.detailsDictionary objectForKey:[self.detailKeys objectAtIndex:indexPath.row]];
+        NSArray *details = self.detailsLoader.stockDetails;
+        YFStockDetails *stockDetails = [details objectAtIndex:0];        
+        NSString *str = [stockDetails.detailsDictionary objectForKey:[self.detailKeys objectAtIndex:indexPath.row]];
         if (![[NSNull null] isEqual:str]) {
             cell.detailTextLabel.text = str;             
         }
